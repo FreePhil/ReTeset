@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReExercise", "ReExercise\ReExercise.csproj", "{0CA014E6-C485-490B-83C3-EDE38B35EAD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReExercise", "TestReExercise\TestReExercise.csproj", "{2A562BC4-7B3B-43BD-A393-FD80CBC072C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CA014E6-C485-490B-83C3-EDE38B35EAD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA014E6-C485-490B-83C3-EDE38B35EAD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA014E6-C485-490B-83C3-EDE38B35EAD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA014E6-C485-490B-83C3-EDE38B35EAD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A562BC4-7B3B-43BD-A393-FD80CBC072C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A562BC4-7B3B-43BD-A393-FD80CBC072C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A562BC4-7B3B-43BD-A393-FD80CBC072C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A562BC4-7B3B-43BD-A393-FD80CBC072C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
