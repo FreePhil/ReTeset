@@ -48,27 +48,27 @@ namespace TestReExercise
         [Test]
         public void TestEmail_Null()
         {
-            String targetAddress = null;
+            String targetEmail = null;
             
-            bool validatedResult = validator.IsValidUrl(targetAddress);
+            bool validatedResult = validator.IsValidEmail(targetEmail);
             Assert.False(validatedResult);            
         }
 
         [Test]
         public void TestEmail_Empty()
         {
-            String targetAddress = String.Empty;
+            String targetEmail = String.Empty;
             
-            bool validatedResult = validator.IsValidUrl(targetAddress);
+            bool validatedResult = validator.IsValidEmail(targetEmail);
             Assert.False(validatedResult);             
         }
 
         [TestCase("tom@gmail.com")]
         [TestCase("jason.chen@hanlin.com.tw")]
         [TestCase("jane@microsoft.com.tw")]
-        public void TestEmail_Address(String targetAddress)
+        public void TestEmail_Address(String targetEmail)
         {
-            bool validatedResult = validator.IsValidUrl(targetAddress);
+            bool validatedResult = validator.IsValidEmail(targetEmail);
             Assert.True(validatedResult);              
         }
     }
