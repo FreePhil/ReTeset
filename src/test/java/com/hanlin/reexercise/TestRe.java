@@ -73,6 +73,7 @@ public class TestRe {
     })
     public void testEmail_Address(String targetEmail) throws Exception {
         boolean validatedResult = validator.isValidEmail(targetEmail);
+
         Assertions.assertTrue(validatedResult);
     }
 }
