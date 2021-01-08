@@ -49,6 +49,18 @@ public class TestRe {
         Assertions.assertTrue(validatedResult);
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "http://testbank.hle.com.tw:8080/home^land/",
+            "https://www.hle.com.tw:abc/home/domain/",
+            "http://localhost::8080",
+    })
+    public void testUrl_BadHttp(String targetUrl) throws Exception {
+
+        boolean validatedResult = validator.isValidUrl(targetUrl);
+        Assertions.assertFalse(validatedResult);
+    }
+
     @Test
     public void testEmail_Null() throws Exception {
         String targetEmail = null;
@@ -75,5 +87,17 @@ public class TestRe {
         boolean validatedResult = validator.isValidEmail(targetEmail);
 
         Assertions.assertTrue(validatedResult);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "Abc.example.com",
+            "A@b@c@example.comw",
+            "_like_underscore@but_its_not_allow_in_this_part.example.com",
+    })
+    public void testEmail_BadAddress(String targetEmail) throws Exception {
+        boolean validatedResult = validator.isValidEmail(targetEmail);
+
+        Assertions.assertFalse(validatedResult);
     }
 }
