@@ -44,6 +44,15 @@ namespace TestReExercise
             bool validatedResult = validator.IsValidUrl(targetUrl); 
             Assert.True(validatedResult);
         }
+        
+        [TestCase("http://testbank.hle.com.tw:8080/home^land/")]
+        [TestCase("https://www.hle.com.tw:abc/home/domain/")]
+        [TestCase("http://localhost::8080")]
+        public void TestUrl_BadHttp(String targetUrl)
+        {
+            bool validatedResult = validator.IsValidUrl(targetUrl); 
+            Assert.False(validatedResult);
+        }
 
         [Test]
         public void TestEmail_Null()
@@ -70,6 +79,15 @@ namespace TestReExercise
         {
             bool validatedResult = validator.IsValidEmail(targetEmail);
             Assert.True(validatedResult);              
+        }
+        
+        [TestCase("Abc.example.com")]
+        [TestCase("A@b@c@example.com")]
+        [TestCase("i_like_underscore@but_its_not_allow_in_this_part.example.com")]
+        public void TestEmail_BadAddress(String targetEmail)
+        {
+            bool validatedResult = validator.IsValidEmail(targetEmail);
+            Assert.False(validatedResult);              
         }
     }
 }
