@@ -34,18 +34,6 @@ public class TestRe {
         Assertions.assertFalse(validatedResult);
     }
 
-//        [TestCase("http://www.hle.com.tw")]
-//            [TestCase("https://www.hle.com.tw")]
-//            [TestCase("https://testbank.hle.com.tw:8080")]
-//            [TestCase("http://testbank.hle.com.tw:8080/home")]
-//            [TestCase("https://www.hle.com.tw:80001/home/domain/")]
-//            [TestCase("https://www.hle.com.tw:80001/home/cp/calendar?subject=ch&year=50")]
-//            [TestCase("http://localhost:8080")]
-//@ParameterizedTest
-//@ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE}) // six numbers
-//void isOdd_ShouldReturnTrueForOddNumbers(int number) {
-//    assertTrue(Numbers.isOdd(number));
-//}
     @ParameterizedTest
     @ValueSource(strings = {
             "http://www.hle.com.tw",
@@ -84,6 +72,7 @@ public class TestRe {
             "jane@microsoft.com.tw",
     })
     public void TestEmail_Address(String targetAddress) throws Exception {
+
         boolean validatedResult = validator.isValidUrl(targetAddress);
         Assertions.assertTrue(validatedResult);
     }
